@@ -1,0 +1,66 @@
+1244_스위치 켜고 끄기
+
+8개의 상태 표시
+
+0 꺼짐 1 켜짐 
+
+남 : 받은 번호 숫자*1 2 3 ... 인덱스 넘어가면 종료
+
+여 :  받은 수 중심 양측 대칭 가장 먼 자리 바꾸기 구간에 속한 스위치 갯수는 항상 홀수
+
+12345 번
+01010 일때 10101 로 바뀐다. 3 +i
+
+첫번째 줄 스위치 갯수
+100 이하 양의 ㅈ어수
+
+둘재 줄 스위치 상태
+학생 수
+남학생 1 여학생 2
+성별 받은 숫자
+성별 받은 숫자 # 학생 수 만큼
+
+import sys
+sys.stdin = open('input.txt')
+
+N = int(input()) # 전구 갯수
+
+switch = list(map(int, input( ).split())) # 스위치 입력받기
+
+PN = int(input())
+
+for i in range(PN):
+    se, idx_num = map(int, input().split())
+    if se == 1:
+        switch[idx_num] = (swithch[idx_num]+1)%2
+    else:
+        # 여자일 때
+        for i in range(1,PN):
+            start = idx_num
+	end = idx_num+1
+            if 두개 다 범위 내에 있고, switch[idx_num-i] == switch[idx_num+i]: 양쪽 대칭이라면
+	    start = idx_num - i
+                end = idx_num + i + 1    
+            else:
+                break
+         # 끝나고 나서
+         for wm in range(start,end):
+             switch[wm] = (swithch[wm]+1)%2
+
+#0:20,21 40
+#20*i+ i 20*i+20
+for i in range():
+    print(swirch[20*i+ i 20*i+20]
+
+
+10157_자리배정
+
+
+
+
+
+
+
+                       
+            
+
