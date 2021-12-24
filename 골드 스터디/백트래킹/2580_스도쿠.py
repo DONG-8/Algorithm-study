@@ -36,7 +36,6 @@ def recur(x):
     global esc
     # 하나 완성된다면 종료
     if esc:
-        print('종료')
         return
 
     # 좌표의 끝을 지났으면 x = 0~8까지가면 모든 0을 다채움
