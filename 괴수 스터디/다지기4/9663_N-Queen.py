@@ -5,23 +5,49 @@ N이 주어졌을 때, 퀸을 놓는 방법의 수를 구하는 프로그램을
 작성하시오
 
 '''
-from collections import deque
+# from collections import deque
 
-# 한 자리 방문 했으면 다음 행 찾아가는 재귀문
-# 종료조건은 N이 되었을 때
+# 각 행과 각 열에는 하나씩만 들어가야하며, 대각선 조건을 확인해야한다.
+# 방문한 정보에 대해서 2차원으로 나타낼 필요가 없어진다.
 def recur(x):
+    global count
+
+    # 종료조건
+    if x == N:
+        # 마지막행까지 들어갔다면, 카운트 증가
+        count += 1
+        return
 
     for i in range(N):
-        if visit[x][i] == 0:
-            pass    
-            
+        # 인덱스 == 행, 내부 VALUE == 열을 의미
+        # 대각선을 만족하는 행만 재귀에 들어감
+        visit[x] = i
+        if cross(x):
+            recur(x+1)
+        visit[x] = -1
+
+
+
+# 퀸 공격범위 확인
+def cross(x):
+    # flag = True
+    for i in range(x):
+        # 대각선내에 있다면 같은 열이라면
+        if visit[i] == visit[x] or x-i == abs(visit[i]-visit[x]):
+            return False
+    return True   
+
+
 N = int(input())
-visit = [[0]*N for _ in range(N)]
-
-
-num = 0
+visit = [-1]*N
+sero = [False]*N
+count = 0
 
 recur(0)
+print(count)
+
+
+
 # # 퀸이 있는 자리의 행과 열 각 대각선 방문처리 하는 함수
 # def queen_gs(x,y):
 #     # 행 & 열    
