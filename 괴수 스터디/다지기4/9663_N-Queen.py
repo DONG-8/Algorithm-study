@@ -40,7 +40,6 @@ def cross(x):
 
 N = int(input())
 visit = [-1]*N
-sero = [False]*N
 count = 0
 
 recur(0)
