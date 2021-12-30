@@ -13,7 +13,6 @@
 트리플 소트로 정렬할 수 있는지 판별하는 프로그램을 작성하시오
 
 '''
-
 N = int(input())
 
 arr = list(map(int, input().split()))
