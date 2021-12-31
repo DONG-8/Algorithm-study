@@ -42,7 +42,7 @@ for _ in range(N):
 arr = arr[:max_length]  # 필요없는 부분 잘라주기
 # arr = [['F', 'B'], ['C', 'E'], ['G', 'D'], ['C'], ['A']]
 
-# 중복해서 나오는것을 어떻게 체크? 자리수에 맞게 111 * 9 --> A 
+# 중복해서 나오는것을 어떻게 체크? 자리수에 맞게  A = 9  AAA 111*9 ==> A*(10**2) + A*(10*1)
 for i in range(max_length-1,-1,-1):
     for j in arr[i]:
         if j in alpa:
