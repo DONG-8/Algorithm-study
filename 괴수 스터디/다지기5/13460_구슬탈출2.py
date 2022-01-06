@@ -30,4 +30,7 @@ arr = [list(input()) for _ in range(N)]
 dx = [-1, 1, 0, 0]
 dy = [0, 0, -1, 1]
 
-visit
+def bfs():
+    # 방문한곳의 카운트를 어떻게 할것인가..
+    # 방문한 곳의 좌표를 등록한다.
+    pass
