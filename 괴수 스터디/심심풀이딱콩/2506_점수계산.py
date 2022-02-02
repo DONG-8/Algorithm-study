@@ -1,3 +1,5 @@
+# 점수계산
+
 N = int(input())
 
 arr = [0]+list(map(int, input().split()))
