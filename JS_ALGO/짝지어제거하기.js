@@ -1,8 +1,13 @@
 function solution(s) {
-  var answer = -1;
+  let stack = [];
 
-  // [실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
-  console.log("Hello Javascript");
+  for (let i = 0; i < s.length; i++) {
+    if (!stack.length || stack[stack.length - 1] !== s[i]) {
+      stack.push(s[i]);
+    } else {
+      stack.pop();
+    }
+  }
 
-  return answer;
+  return stack.length ? 0 : 1;
 }
