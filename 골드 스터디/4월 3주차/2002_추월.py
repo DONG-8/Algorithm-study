@@ -12,3 +12,6 @@ total_arr = [input() for _ in range(2*n)]
 
 in_arr = total_arr[0:n]
 out_arr = total_arr[n:2*n]
+
+for i in range(len(in_arr)):
+    print(in_arr[i],'나와떠염')
